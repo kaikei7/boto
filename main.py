@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 import json
 import requests
 
-client = commands.Bot(command_prefix="ai!")
+intents = discord.Intents.default()
+client = commands.Bot(command_prefix="ai!",intents=intents)
 token = os.getenv('DISCORD_TOKEN')
 
 @client.event
